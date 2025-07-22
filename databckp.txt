@@ -1,0 +1,7 @@
+[
+    { id: 4, content: 'Couronnement de Charlemagne', start: '0800-12-25', type: 'point', group: 1 },
+    { id: 5, content: 'Découverte de l’Amérique', start: '1492-10-12', type: 'point', group: 1 },
+    { id: 6, content: 'Révolution française', start: '1789-07-14', end: '1799-11-09', type: 'range', group: 2 },
+    { id: 7, content: 'Débarquement en Normandie', start: '1944-06-06', type: 'point', group: 2 },
+    { id: 8, content: 'Prise de Grenade', start: '1492-12-12', type: 'point', group: 1 }
+];
