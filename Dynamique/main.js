@@ -115,7 +115,7 @@ document.getElementById('focusBtn').onclick = function () {
         alert("Sélectionnez au moins un événement à centrer.");
         return;
     }
-    timeline.focus(selection, { animation: true }, zoom = false);
+    timeline.focus(selection, {animation: true, zoom: false});
 };
 
 // Gestion du double-clic pour ajouter un événement à une date choisie
