@@ -48,7 +48,7 @@ Grandes famines;1315;1318;;Europe médiévale
 Guerre de Cent Ans;1337;1453;série de conflits entrecoupés qui ont opposé les monarchies françaises et anglaises. Bornes chronologiques conventionnelles choisies au XIXe, de la revendication de la couronne de France par Edouard III à la bataille de Castillon;Europe médiévale
 Hattin;1187;;Saladin défait les francs du royaume latin de Jérusalem à Hattin, Jérusalem tombe peu après;Islam médiéval
 Hégire;622;;Muhammad et sa communauté quittent la Mecque pour Médine. Point de départ du calendrier musulman. Début du conflit entre les musulmans et les Qurayshites;Islam médiéval
-l’émirat omeyyade d’Espagne est proclamé par Abd al-Raman Ier;756;;unique survivant omeyyade. Il est officiellement soumis aux Abbassides;Islam médiéval
+Proclamation de l'émirat omeyyade d’Espagne;756;; Proclamé par Abd al-Raman Ier, unique survivant omeyyade. Il est officiellement soumis aux Abbassides;Islam médiéval
 l’ensemble de la péninsule ibérique est conquise, sauf le royaume des Asturies;720;;;Islam médiéval
 L’exarchat de Carthage chute face aux musulmans;698;;fin de la présence de l’empire byzantin en Afrique du Nord;Islam médiéval
 La principauté samanide du califat abbasside s’effondre;999;;avènement des Ghaznévides;Islam médiéval
@@ -56,7 +56,7 @@ Las Navas de Tolosa;1212;; l’armée chrétienne unifiée écrase les Almohades
 Domination Bouyide;950;1050;Les Bouyides dominent la politique abbasside (dates approximative);Islam médiéval
 les émirs des taifas alliés aux Almoravides stoppent la Reconquista;1086;;;Islam médiéval
 Les Fatimides conquièrent l'Egypte;969;;;Islam médiéval
- les musulmans achèvent la conquête de l’empire sassanide, mais le territoire restera perclus de révoltes sous les Omeyyades;651;;;Islam médiéval
+les musulmans achèvent la conquête de l’empire sassanide;651;;mais le territoire restera perclus de révoltes sous les Omeyyades;Islam médiéval
 Les musulmans reprennent Jérusalem;1187;;;Europe médiévale
 Les Qarmates pillent la Mecque;930;;;Islam médiéval
 les Seldjoukides s’emparent de Bagdad;1055;;;Islam médiéval
@@ -88,8 +88,7 @@ Sac de Constantinople;1204;;;Europe médiévale
 schisme entre Églises romaine et byzantine;1054;;;Europe médiévale
 Signature de la Magna Carta;1215;;l’aristocratie anglaise gagne du pouvoir;Europe médiévale
 Théodose fait du christianisme une religion d’état;380;;;Europe médiévale
-Traité de Brétigny;1360;;" les Plantagenêt récupèrent de grands territoires à l’Ouest du royaume de
-France";Europe médiévale
+Traité de Brétigny;1360;;" les Plantagenêt récupèrent de grands territoires à l’Ouest du royaume de France";Europe médiévale
 Traité de Jaffa;1229;;signé entre Ayyoubides et Frédéric II du SERG, les croisés récupèrent Jérusalem, mais les musulmans conservent des enclaves. Jérusalem devient une ville ouverte, partagées en chrétiens et musulmans pendant 15 ans;Islam médiéval
 Traité de Troyes;1420;;le territoire au nord de la Loire appartient à la couronne d’Angleterre;Europe médiévale
 traité de Verdun;843;;l’empire carolingien est divisé en 3, Lotharingie, Francie Occidentale et Francie Orientale;Europe médiévale
