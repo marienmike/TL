@@ -1,16 +1,52 @@
 // Groupes d'événements
 const allGroups = [
-    { id: 1, content: "Europe médiévale" },
-    { id: 2, content: "Islam médiéval" }
+    { id: 1, content: "Groupe 1" },
+    { id: 2, content: "Groupe 2" },
+    { id: 3, content: "Groupe 3" },
+    { id: 4, content: "Groupe 4" },
+    { id: 5, content: "Groupe 5" }
 ];
 const groups = new vis.DataSet(allGroups);
 
-const data = [];
+const data = [
+    { id: 11, content: 'Couronnement de Charlemagne', start: '0800-12-25', type: 'point', group: 1
+    },
+    { id: 22, content: 'Découverte de l’Amérique', start: '1492-10-12', type: 'point', group: 1
+    },
+    { id: 33, content: 'Révolution française', start: '1789-07-14', end: '1799-11-09', type: 'range', group: 2
+    },
+    { id: 44, content: 'waou', start: '1300-06-06', type: 'point', group: 2
+    },
+    { id: 41, content: '!!!!', start: '1248-06-06', type: 'point', group: 4
+    },
+    { id: 42, content: 'Event', start: '1515-06-06', type: 'point', group: 5
+    },
+    { id: 45, content: 'Dingue !', start: '1920-06-06', type: 'point', group: 3
+    },
+    { id: 46, content: 'Prise de Grenade', start: '900-12-12', type: 'point', group: 1
+    }
+
+];
 
 // Ajout automatique de la mise en forme (className) selon le groupe
 data.forEach(ev => {
-    if (ev.group === 1) ev.className = 'group-co';
-    else if (ev.group === 2) ev.className = 'group-ma';
+    switch (ev.group) {
+        case 1:
+            ev.className="group-1";
+            break;
+        case 2:
+            ev.className="group-2";
+            break;
+        case 3:
+            ev.className="group-3";
+            break;
+        case 4:
+            ev.className="group-4";
+            break;
+        case 5:
+            ev.className="group-5";
+            break;
+    }
 });
 const items = new vis.DataSet(data);
 
@@ -115,8 +151,23 @@ document.getElementById('importBtn').onclick = function () {
                         ev.id = maxId + 1;
                     }
                     // Ajoute la classe selon le groupe
-                    if (ev.group === 1) ev.className = 'group-co';
-                    else if (ev.group === 2) ev.className = 'group-ma';
+                    switch (ev.group) {
+                        case 1:
+                            ev.className = "group-1";
+                            break;
+                        case 2:
+                            ev.className = "group-2";
+                            break;
+                        case 3:
+                            ev.className = "group-3";
+                            break;
+                        case 4:
+                            ev.className = "group-4";
+                            break;
+                        case 5:
+                            ev.className = "group-5";
+                            break;
+                    }
                     items.add(ev);
                 });
                 timeline.fit();
@@ -182,7 +233,7 @@ timeline.on('doubleClick', function (props) {
     // Demande le groupe si on clique ailleurs que sur la frise
     let group = props.group;
     if (!group) {
-        group = prompt("Numéro du groupe (1 = Europe médiévale, 2 = Islam médiéval) :", "1");
+        group = prompt("A quel groupe appartient la nouvelle date ? (1, 2, 3, 4 ou 5)", "1");
         if (!group) return;
         group = parseInt(group, 10);
     }
@@ -212,7 +263,7 @@ timeline.on('doubleClick', function (props) {
     }
 
     // Ajoute la classe pour le groupe
-    event.className = group === 1 ? 'group-co' : (group === 2 ? 'group-ma' : '');
+    event.className = group === 1 ? 'group-2' : (group === 2 ? 'group-1' : '');
     items.add(event);
 });
 
@@ -221,6 +272,9 @@ function updateGroups() {
     const showGroups = [];
     if (document.getElementById('group1').checked) showGroups.push(1);
     if (document.getElementById('group2').checked) showGroups.push(2);
+    if (document.getElementById('group3').checked) showGroups.push(3);
+    if (document.getElementById('group4').checked) showGroups.push(4);
+    if (document.getElementById('group5').checked) showGroups.push(5);
 
     // Si aucune case cochée, on masque tout
     if (showGroups.length === 0) {
@@ -235,5 +289,8 @@ function updateGroups() {
 
 document.getElementById('group1').addEventListener('change', updateGroups);
 document.getElementById('group2').addEventListener('change', updateGroups);
+document.getElementById('group3').addEventListener('change', updateGroups);
+document.getElementById('group4').addEventListener('change', updateGroups);
+document.getElementById('group5').addEventListener('change', updateGroups);
 
 updateGroups();

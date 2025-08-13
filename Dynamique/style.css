@@ -120,8 +120,8 @@ body {
     vertical-align: middle;
 }
 
-/* Rouge pour Moyen Âge : range */
-.vis-range.group-ma {
+/* Rouge pour G1 : range */
+.vis-range.group-1 {
     background: #e74c3c !important;
     border-color: #c0392b !important;
     color: #fff !important;
@@ -135,16 +135,16 @@ body {
 }
 
 /* Point Moyen Âge */
-.vis-item.group-ma.vis-point {
+.vis-item.group-1.vis-point {
     background: transparent !important;
     border: none !important;
 }
 
-.vis-item.group-ma.vis-point .vis-item-content {
+.vis-item.group-1.vis-point .vis-item-content {
     color: #e74c3c !important;
 }
 
-.vis-item.group-ma.vis-point .vis-point {
+.vis-item.group-1.vis-point .vis-point {
     background: #e74c3c !important;
     border-color: #c0392b !important;
 }
