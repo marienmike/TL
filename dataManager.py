@@ -25,17 +25,26 @@ def formater_date(chaine):
         raise ValueError(f"Format de date non reconnu : {chaine}")
 
 
+#Chargement des données
 csv_file = 'Data/Curated_MA.csv'
 timeline_data = pd.read_csv(csv_file, encoding='utf-8', delimiter=';')
 
+#Création des colonnes pour vis-timeline
 timeline_data=timeline_data.assign(id=timeline_data.index + 1)
 timeline_data=timeline_data[['id', 'content', 'start', 'end', 'groupname']]
+
+#Remplacement des NaN par des 0
 timeline_data['end'].fillna(0, inplace=True)
 timeline_data['end'] = timeline_data['end'].astype(int)
+
+#Ajout de la colonne "type" : point ou range
 timeline_data.insert(4, 'type', 'point')
+#Ajout de la colonne "groupe" pour déterminer à quel cours appartient la date
 timeline_data.insert(5, 'group', 0)
 print(timeline_data.head())
 
+
+#Formatage date de début
 start_curated = timeline_data['start'].tolist()
 for i in range(len(start_curated)):
     try:
@@ -44,8 +53,8 @@ for i in range(len(start_curated)):
         print(f"Erreur de format pour la date '{timeline_data['start'][i]}': {e}")
         start_curated[i] = None  
 
+#Formatage date de fin
 end_curated = timeline_data['end'].tolist()
-
 for i in range(len(end_curated)):
     try:
         date_stringified = str(end_curated[i])

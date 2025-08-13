@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Frise chronologique dynamique</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://unpkg.com/vis-timeline/styles/vis-timeline-graph2d.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://unpkg.com/vis-timeline/standalone/umd/vis-timeline-graph2d.min.js"></script>
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="accueil.html">Accueil</a>
+            <a href="frise_v2.html">Frise</a>
+            <a href="a-propos.html">À propos</a>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <h1>Frise chronologique</h1>
+            <p>Sélectionnez ci-dessous le jeu de dates à visualiser. Utilisez Ctrl + molette pour zoomer / dézoomer. Glissez pour naviguer dans le temps.</p>
+        </div>
+        <!-- Sélection du jeu de dates -->
+        <div id="group-filters" class="centered custom-checkbox">
+            <label><input type="checkbox" id="group1" checked> Europe médiévale</label>
+            <label><input type="checkbox" id="group2" checked> Islam médiéval</label>
+        </div>
+        <!-- Insertion de la TL -->
+        <div id="timeline"></div>
+         <!-- Boutons -->
+        <div class="centered">
+            <button id="editBtn" class="custom-btn">Editer l'événement</button>
+            <button id="exportBtn" class="custom-btn">Exporter la frise</button>
+            <button id="fitBtn" class="custom-btn">Ajuster</button>
+            <button id="focusBtn" class="custom-btn">Centrer sur sélection</button>
+        </div>
+    </main>
+    <footer>
+        <a target="_blank" href="https://bsky.app/profile/marienmike.bsky.social" class="lien-icone">
+            <img src="images/blsky.png" alt="Logo Bluesky">
+        </a>
+    </footer>
+</body>
+
+</html>

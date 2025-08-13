@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 1em;
+    background-color: #faf6dd;
+}
+
+main{
+    margin-left:2em;
+    margin-right: 2em;
+    margin-bottom: 2.8em;
+    margin-top: 2.8em;
+}
+
+header,
+footer {
+    background-color: white;
+    width:100%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+header {
+    position:fixed;
+    left:0px;
+    top:0px;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1em;
+    padding-right:1em;
+}
+
+footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    height: 1.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img {
+    height: 1.5em;
+    width: 1.5em;
+}
+
+a {
+    color: #242424;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.lien-icone:hover {
+    opacity: 0.5;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#timeline {
+    width: 100%;
+    border: 1px solid lightgray;
+}
+
+/* Disposition des boutons et cases à cocher */
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    flex-wrap: wrap;
+}
+
+/* Style des boutons */
+.custom-btn {
+    background: #4da6ff;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 28px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin: 5px 8px;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px #0001;
+}
+
+.custom-btn:hover,
+.custom-btn:focus {
+    background: #1e90ff;
+    transform: translateY(-2px) scale(1.04);
+    outline: none;
+}
+
+/* Style des cases à cocher */
+.custom-checkbox label {
+    font-size: 1.1em;
+    margin: 0 12px;
+    cursor: pointer;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    transform: scale(1.3);
+    margin-right: 6px;
+    accent-color: #4da6ff;
+    vertical-align: middle;
+}
+
+/* Rouge pour Moyen Âge : range */
+.vis-range.group-ma {
+    background: #e74c3c !important;
+    border-color: #c0392b !important;
+    color: #fff !important;
+}
+
+/* Vert pour Contemporaine : range */
+.vis-range.group-co {
+    background: #27ae60 !important;
+    border-color: #1e8449 !important;
+    color: #fff !important;
+}
+
+/* Point Moyen Âge */
+.vis-item.group-ma.vis-point {
+    background: transparent !important;
+    border: none !important;
+}
+
+.vis-item.group-ma.vis-point .vis-item-content {
+    color: #e74c3c !important;
+}
+
+.vis-item.group-ma.vis-point .vis-point {
+    background: #e74c3c !important;
+    border-color: #c0392b !important;
+}
+
+/* Point Contemporaine */
+.vis-item.group-co.vis-point {
+    background: transparent !important;
+    border: none !important;
+}
+
+.vis-item.group-co.vis-point .vis-item-content {
+    color: #27ae60 !important;
+}
+
+.vis-item.group-co.vis-point .vis-point {
+    background: #27ae60 !important;
+    border-color: #1e8449 !important;
+}
