@@ -9,26 +9,9 @@ const allGroups = [
 const groups = new vis.DataSet(allGroups);
 
 const data = [
-    { id: 11, content: 'Couronnement de Charlemagne', start: '0800-12-25', type: 'point', group: 1
-    },
-    { id: 22, content: 'Découverte de l’Amérique', start: '1492-10-12', type: 'point', group: 1
-    },
-    { id: 33, content: 'Révolution française', start: '1789-07-14', end: '1799-11-09', type: 'range', group: 2
-    },
-    { id: 44, content: 'waou', start: '1300-06-06', type: 'point', group: 2
-    },
-    { id: 41, content: '!!!!', start: '1248-06-06', type: 'point', group: 4
-    },
-    { id: 42, content: 'Event', start: '1515-06-06', type: 'point', group: 5
-    },
-    { id: 45, content: 'Dingue !', start: '1920-06-06', type: 'point', group: 3
-    },
-    { id: 46, content: 'Prise de Grenade', start: '900-12-12', type: 'point', group: 1
-    }
-
 ];
 
-// Ajout automatique de la mise en forme (className) selon le groupe
+// Ajout automatique de la mise en forme (className) selon le groupe. Inutile quand dataset d'entrée est vide
 data.forEach(ev => {
     switch (ev.group) {
         case 1:
@@ -213,7 +196,7 @@ document.getElementById('fitBtn').onclick = function () {
 // Gestion du double-clic pour ajouter un événement à une date choisie
 timeline.on('doubleClick', function (props) {
     // Pré-remplissage de la date de début
-    const defaultStart = ""
+    //const defaultStart = ""
     //props.time ?`${String(props.time.getDate()).padStart(2, '0')}-${String(props.time.getMonth() + 1).padStart(2, '0')}-${props.time.getFullYear()}` : "";
 
     // Demande toutes les infos dans une seule pop-up
@@ -263,7 +246,7 @@ timeline.on('doubleClick', function (props) {
     }
 
     // Ajoute la classe pour le groupe
-    event.className = group === 1 ? 'group-2' : (group === 2 ? 'group-1' : '');
+    event.className = `group-${group}`;
     items.add(event);
 });
 

@@ -1,0 +1,64 @@
+.vis-range {
+    text-align: center;
+}
+
+/* Rouge pour G1 */
+.vis-range.group-1 {
+    background: #e74c3c;
+    border-color: #c0392b;
+    color: #fff;
+}
+
+.vis-item.group-1.vis-point {
+    color: #e74c3c;
+}
+
+/* Vert pour G2 */
+.vis-range.group-2 {
+    background: #27ae60;
+    border-color: #1e8449;
+    color: #fff;
+}
+
+.vis-item.group-2.vis-point {
+    color: #27ae60;
+}
+
+
+/* Violet pour pour G3 */
+.vis-range.group-3 {
+    background: #a706bd ;
+    border-color: #5f006b;
+    color: #ffffff;
+}
+
+.vis-item.group-3.vis-point {
+    color: #a706bd;
+}
+
+.vis-item.group-3.vis-dot {
+    border-color: #a706bd;
+}
+
+/* Orange pour G4 */
+.vis-range.group-4 {
+    background: #ff5f02;
+    border-color: #883d00;
+    color: #000000;
+}
+
+.vis-item.group-4.vis-point {
+    color: #ff5f02;
+}
+
+/* Bleu pour G5 */
+.vis-range.group-5 {
+    background: #2c40f5;
+    border-color: #0022e4;
+    color: #ffffff;
+}
+
+.vis-item.group-5.vis-point {
+    color: #2c40f5;
+}
+

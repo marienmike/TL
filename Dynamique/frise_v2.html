@@ -4,8 +4,10 @@
 <head>
     <meta charset="utf-8">
     <title>Frise chronologique dynamique</title>
-    <link href="style.css" rel="stylesheet">
-    <link href="https://unpkg.com/vis-timeline/styles/vis-timeline-graph2d.min.css" rel="stylesheet">
+    <link href="styles/pages_web.css" rel="stylesheet">
+    <link href="styles/vis_style.css" rel="stylesheet">
+    <link href="styles/timeline.css" rel="stylesheet">
+    <!-- <link href="https://unpkg.com/vis-timeline/styles/vis-timeline-graph2d.min.css" rel="stylesheet"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://unpkg.com/vis-timeline/standalone/umd/vis-timeline-graph2d.min.js"></script>
@@ -15,15 +17,16 @@
 <body>
     <header>
         <nav>
-            <a href="accueil.html">Accueil</a>
             <a href="frise_v2.html">Frise</a>
-            <a href="a-propos.html">À propos</a>
+            <a href="datasets.html">Dates-asets</a>
+            <a href="aide.html">Aide</a>
+            <a href="apropos.html">À propos</a>
         </nav>
     </header>
     <main>
         <div>
             <h1>Frise chronologique</h1>
-            <p>Sélectionnez ci-dessous le jeu de dates à visualiser. Utilisez Ctrl + molette pour zoomer / dézoomer. Glissez pour naviguer dans le temps.</p>
+            <p>Sélectionnez ci-dessous les groupes de dates à visualiser. Double-cliquez pour ajouter un événement. Utilisez Ctrl + molette pour zoomer / dézoomer. Glissez pour naviguer dans le temps.</p>
         </div>
         <!-- Sélection du jeu de dates -->
         <div id="group-filters" class="centered custom-checkbox">
