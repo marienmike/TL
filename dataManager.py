@@ -41,7 +41,6 @@ timeline_data['end'] = timeline_data['end'].astype(int)
 timeline_data.insert(4, 'type', 'point')
 #Ajout de la colonne "groupe" pour déterminer à quel cours appartient la date
 timeline_data.insert(5, 'group', 0)
-print(timeline_data.head())
 
 
 #Formatage date de début

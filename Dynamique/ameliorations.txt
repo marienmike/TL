@@ -1,0 +1,2 @@
+- Réduction dynamique de la taille du texte afin qu'il s'affiche toujours en entier en fonction de la taille de l'item
+- mettre les noms des groupes avec les bonnes couleurs : g1 rouge g2 vert etc

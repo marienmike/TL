@@ -196,13 +196,12 @@ document.getElementById('fitBtn').onclick = function () {
 // Gestion du double-clic pour ajouter un événement à une date choisie
 timeline.on('doubleClick', function (props) {
     // Pré-remplissage de la date de début
-    //const defaultStart = ""
-    //props.time ?`${String(props.time.getDate()).padStart(2, '0')}-${String(props.time.getMonth() + 1).padStart(2, '0')}-${props.time.getFullYear()}` : "";
+    const defaultStart = props.time ?`${String(props.time.getDate()).padStart(2, '0')}-${String(props.time.getMonth() + 1).padStart(2, '0')}-${props.time.getFullYear()}` : "";
 
     // Demande toutes les infos dans une seule pop-up
     const saisie = prompt(
         "Saisir : nom;date début JJ-MM-AAAA;date fin JJ-MM-AAAA (optionnelle)\nExemple : Guerre de Cent Ans;17-07-1453;19-10-1453",
-        ""
+        `;${defaultStart};`
     );
     if (!saisie) return;
 
@@ -224,17 +223,40 @@ timeline.on('doubleClick', function (props) {
     // Conversion JJ-MM-AAAA -> AAAA-MM-JJ
     function toISO(dateStr) {
         if (!dateStr) return "";
-        const [day, month, year] = dateStr.split("-");
+        const parts = dateStr.split("-");
+        if (parts.length !== 3) return ""; // Sécurité : format incorrect
+        let [day, month, year] = parts;
+        if (!year) return ""; // Sécurité supplémentaire
+        year = year.padStart(4, '0');
+        day = day.padStart(2, '0');
+        month = month.padStart(2, '0');
         return `${year}-${month}-${day}`;
     }
 
-    // Génère un nouvel id unique
+        // Fonction pour extraire l'année sans zéro devant
+    function extractYearNoZero(dateStr) {
+        if (!dateStr) return "";
+        const parts = dateStr.split("-");
+        if (parts.length !== 3) return "";
+        // Supprime les zéros à gauche
+        return String(Number(parts[2]));
+    }
+
+     // Génère un nouvel id unique
     const maxId = Math.max(...items.get().map(ev => ev.id), 0);
 
     // Ajoute l'événement, type selon présence de endStr
+    let eventContent = content;
+    const yearStart = extractYearNoZero(startStr);
+    if (endStr) {
+        const yearEnd = extractYearNoZero(endStr);
+    } else {
+        eventContent += ` (${yearStart})`;
+    }
+
     const event = {
         id: maxId + 1,
-        content: content,
+        content: eventContent,
         start: toISO(startStr),
         group: group
     };
