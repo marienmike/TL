@@ -1,35 +1,47 @@
+.vis-item .vis-item-overflow {
+  overflow: visible !important;
+}
+
+.vis-item-content { 
+    color: #000000; 
+}
+
 .vis-range {
     text-align: center;
 }
 
 /* Rouge pour G1 */
 .vis-range.group-1 {
-    background: #e74c3c;
+    background: #f85151;
     border-color: #c0392b;
-    color: #fff;
 }
 
-.vis-item.group-1.vis-point {
-    color: #e74c3c;
+/*.vis-item.group-1.vis-point {
+    color: #c0392b;
+}*/
+
+.vis-item.group-1.vis-dot {
+    border-color:#c0392b;
 }
 
 /* Vert pour G2 */
 .vis-range.group-2 {
     background: #27ae60;
     border-color: #1e8449;
-    color: #fff;
 }
 
 .vis-item.group-2.vis-point {
     color: #27ae60;
 }
 
+.vis-item.group-2.vis-dot {
+    border-color: #27ae60;
+}
 
 /* Violet pour pour G3 */
 .vis-range.group-3 {
-    background: #a706bd ;
+    background: #e940ff ;
     border-color: #5f006b;
-    color: #ffffff;
 }
 
 .vis-item.group-3.vis-point {
@@ -44,21 +56,27 @@
 .vis-range.group-4 {
     background: #ff5f02;
     border-color: #883d00;
-    color: #000000;
 }
 
 .vis-item.group-4.vis-point {
     color: #ff5f02;
 }
 
+.vis-item.group-4.vis-dot {
+    border-color: #ff5f02;
+}
+
 /* Bleu pour G5 */
 .vis-range.group-5 {
-    background: #2c40f5;
+    background: #909bff;
     border-color: #0022e4;
-    color: #ffffff;
 }
 
 .vis-item.group-5.vis-point {
     color: #2c40f5;
+}
+
+.vis-item.group-5.vis-dot {
+    border-color: #2c40f5;
 }
 
